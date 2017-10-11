@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="09d193af-199d-4fb7-b8b6-f3eeb4dffc94" name="Default" comment="nnn">
+    <list default="true" id="09d193af-199d-4fb7-b8b6-f3eeb4dffc94" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/App.class" afterPath="$PROJECT_DIR$/target/classes/App.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Client.class" afterPath="$PROJECT_DIR$/target/classes/Client.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/FileEventLogger.class" afterPath="$PROJECT_DIR$/target/classes/FileEventLogger.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/App.java" afterPath="$PROJECT_DIR$/src/main/java/App.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Client.java" afterPath="$PROJECT_DIR$/src/main/java/Client.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/FileEventLogger.java" afterPath="$PROJECT_DIR$/src/main/java/FileEventLogger.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring.xml" afterPath="$PROJECT_DIR$/target/classes/spring.xml" />
     </list>
     <ignored path="spring.iws" />
@@ -555,6 +551,13 @@
       <option name="number" value="Default" />
       <updated>1507446998226</updated>
     </task>
+    <task id="LOCAL-00001" summary="nnn">
+      <created>1507748244764</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1507748244764</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
