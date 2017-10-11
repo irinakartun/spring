@@ -8,22 +8,29 @@
     <bean id = "client" class = "Client">
         <constructor-arg type="java.lang.String" value="1"/>
         <constructor-arg type="java.lang.String" value="John Smith"/>
+        <property name="greeting" value="Hello there!"/>
     </bean>
-
-    <bean id = "eventLogger" class = "ConsoleEventLogger"/>
-
-    <bean id = "event" class = "Event" scope="prototype">
-        <constructor-arg>
-            <bean class = "java.util.Date"/>
-        </constructor-arg>
-        <constructor-arg ref="dateFormat"/>
-    </bean>
-
-    <bean id = "dateFormat" class = "java.text.DateFormat" factory-method="getDateTimeInstance"/>
 
     <bean id = "app" class = "App">
         <constructor-arg ref="client"/>
-        <constructor-arg ref="eventLogger"/>
+        <constructor-arg ref="cacheLogger"/>
+        <constructor-arg>
+            <map>
+                <entry key="INFO" value-ref="consoleEventLogger"/>
+                <entry key="ERROR" value-ref="combinedEventLogger"/>
+            </map>
+        </constructor-arg>
     </bean>
+
+    <bean id="combinedEventLogger" class="CombinedEventLogger">
+        <constructor-arg>
+            <list>
+                <ref bean="consoleEventLogger"/>
+                <ref bean="fileLogger"/>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <import resource = "loggers.xml"/>
 
 </beans>
