@@ -20,12 +20,14 @@ public class App {
 
     public void logEvent(EventType type, Event event)
     {
-        EventLogger logger = loggers.get(type);
-        if (logger == null)
+        if (loggers.containsKey(type))
         {
-            logger = this.eventLogger;
+            loggers.get(type).logEvent(event);
         }
-        logger.logEvent(event);
+        else
+        {
+            eventLogger.logEvent(event);
+        }
     }
 
     public static void main(String[] args) {
@@ -34,6 +36,11 @@ public class App {
         App app = (App) ctx.getBean("app");
         Event event = (Event) ctx.getBean("event");
         app.logEvent(EventType.ERROR, event);
+        System.out.println();
+        app.logEvent(EventType.INFO, event);
+        System.out.println();
+        app.logEvent(null, event);
+        System.out.println();
         ctx.close();
     }
 }
